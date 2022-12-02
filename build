@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 export LC_ALL=C
+export CFLAGS="-fomit-frame-pointer -finline-functions-called-once -fmerge-constants -ftree-dce -ftree-dse -ftree-loop-vectorize -ftree-vectorize -fdce -fdse -march=znver3 -DNDEBUG"
+export CXXFLAGS="-fomit-frame-pointer -finline-functions-called-once -fmerge-constants -ftree-dce -ftree-dse -ftree-loop-vectorize -ftree-vectorize -fdce -fdse -march=znver3 -DNDEBUG"
 
 #scripts/fribidi-config
 #scripts/fribidi-build "$@"
